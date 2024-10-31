@@ -1,0 +1,36 @@
+.button-container {
+  height: 60px;
+  flex: 1 1;
+  font-size: 3rem;
+  font-weight: bold;
+  background-color: white;
+  color:darkgreen;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid darkgrey;
+  border-radius: 10px;
+  margin: 4px 8px 4px 8px ;
+  cursor: pointer;
+  user-select: none;
+}
+
+.button-container:hover {
+  background-color: rgb(15, 132, 150);
+  border: 4px solid darkgrey;
+  color:white;
+  transition: 0.15s;
+}
+
+.operator {
+  background-color: #80ffdb;
+  color: black;
+  border: 4px solid darkgrey;
+}
+
+.operator:hover {
+  background-color: black;
+  color: #80ffdb;
+  border: 4px solid darkgrey;
+  transition: 0.15s;
+}
