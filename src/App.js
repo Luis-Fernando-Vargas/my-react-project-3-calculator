@@ -3,7 +3,7 @@ import Button from './components/button';
 import './components/styles/button.css'
 import Screen from './components/screen';
 import ClearButton from './components/clearButton';
-import { useState, } from 'react';
+import { useState, useEffect } from 'react';
 import { evaluate } from 'mathjs'
 
 
@@ -55,6 +55,34 @@ function App() {
       }        
     }  
   };
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      const { key } = e;
+      
+      if (/[0-9]/.test(key)) {
+        insertInput(key); 
+      } else if (/[.+\-*/]/.test(key)) {
+        insertInput(key); 
+      } else if (key === 'Enter') {
+        evaluateInput(); 
+      } else if (key === 'Backspace') {
+        clearScreen(); 
+      }
+    };
+
+    
+    window.addEventListener('keydown', handleKeyDown);
+        
+        window.addEventListener('keydown', handleKeyDown);
+
+        
+        return () => {
+          window.removeEventListener('keydown', handleKeyDown);
+        };
+      }, [input, isResult]); 
+    
+    
   return (
     <div className='App'>
       <div className='main-container'>
