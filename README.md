@@ -31,13 +31,21 @@ This project was created to practice working with React components, state manage
 ## 📦 Installation
 
 1. **Clone this repository**
+```bash
 git clone https://github.com/Luis-Fernando-Vargas/my-react-project-3-calculator.git
+```
 
-2. Navigate to the project folder
+3. Navigate to the project folder
+```bash
 cd my-react-project-3-calculator
+```
 
-3. Install dependencies
+4. Install dependencies
+```bash
 npm install
+```
 
-4. Start the development server
+5. Start the development server
+```bash
 npm run dev
+```
